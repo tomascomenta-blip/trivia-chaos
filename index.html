@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#2a0c05" />
+    <title>Trivia Chaos</title>
+    <!-- Mínimo para el primer fotograma (el resto del CSS llega con el JS): pantalla negra, sin mueble. -->
+    <style>html,body{margin:0;height:100%;overflow:hidden;background:#000}#tvcab,#salon{display:none}</style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='6' y='22' width='88' height='66' rx='14' fill='%235e2e12'/><rect x='14' y='30' width='52' height='50' rx='10' fill='%23ffd36b'/><circle cx='80' cy='44' r='6' fill='%23f2b33d'/><circle cx='80' cy='64' r='6' fill='%23f2b33d'/><path d='M38 22 26 6M46 22 60 4' stroke='%23f2b33d' stroke-width='4'/></svg>" />
+    <script type="module" crossorigin src="./assets/index-CgFq45uo.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DKzjuGCU.css">
+  </head>
+  <body class="theme-lobby tv-full">
+    <!-- El salón de los 70 donde está la tele (solo se ve cuando la tele se aleja). -->
+    <div id="salon" aria-hidden="true">
+      <div class="wall"></div>
+      <div class="tvglow"></div>
+      <div class="wainscot"></div>
+      <div class="floor"></div>
+      <div class="lamp"><i></i></div>
+      <div class="plant"><i></i><i></i><i></i><i></i><b></b></div>
+    </div>
+    <!-- La tele: mueble + pantalla. Todo el juego se dibuja dentro de #tvscreen. -->
+    <div id="tvset">
+      <div id="tvcab" aria-hidden="true">
+        <div class="antenna"><i></i><i></i></div>
+        <div class="bezel"></div>
+        <div class="side">
+          <div class="brand">CANAL CAOS</div>
+          <div class="dial"><div class="dial-face"><span>03</span></div></div>
+          <div class="knob"></div>
+          <div class="grille"></div>
+          <div class="led"></div>
+        </div>
+        <div class="legs"><i></i><i></i></div>
+      </div>
+      <div id="tvscreen">
+        <canvas id="scene"></canvas>
+        <div id="ui"></div>
+      </div>
+    </div>
+    <div id="salon-ui"></div>
+  </body>
+</html>
