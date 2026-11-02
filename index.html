@@ -41,5 +41,16 @@
       </div>
     </div>
     <div id="salon-ui"></div>
+    <!-- Abierto con doble clic (file://) el navegador bloquea el juego: explicar qué hacer en vez de dejarlo en negro. -->
+    <script>
+      if (location.protocol === 'file:') {
+        document.body.innerHTML =
+          '<div style="position:fixed;inset:0;display:grid;place-items:center;background:#2a0c05;color:#fff0d2;font:20px/1.5 system-ui,sans-serif;text-align:center;padding:24px">' +
+          '<div style="max-width:560px"><div style="font-size:40px;font-weight:800;color:#ffd36b;margin-bottom:12px">Trivia Chaos</div>' +
+          'Abierto así, el navegador no deja arrancar el juego.<br><br>' +
+          '<b>Haz doble clic en «Jugar.bat»</b> (está en esta misma carpeta)<br>o juega en<br>' +
+          '<a style="color:#ffd36b" href="https://tomascomenta-blip.github.io/trivia-chaos/">tomascomenta-blip.github.io/trivia-chaos</a></div></div>';
+      }
+    </script>
   </body>
 </html>
